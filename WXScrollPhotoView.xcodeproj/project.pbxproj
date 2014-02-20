@@ -19,6 +19,10 @@
 		6F68F9A818B56AB200440F56 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F68F99018B56AB200440F56 /* UIKit.framework */; };
 		6F68F9B018B56AB200440F56 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6F68F9AE18B56AB200440F56 /* InfoPlist.strings */; };
 		6F68F9B218B56AB200440F56 /* WXScrollPhotoViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F68F9B118B56AB200440F56 /* WXScrollPhotoViewTests.m */; };
+		6F68F9BE18B56B0200440F56 /* WXPhotoScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F68F9BD18B56B0200440F56 /* WXPhotoScrollViewController.m */; };
+		6F68F9C018B56B2900440F56 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F68F9BF18B56B2900440F56 /* Storyboard.storyboard */; };
+		6F68F9C318B56B5400440F56 /* WXPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F68F9C218B56B5400440F56 /* WXPhotoViewController.m */; };
+		6F68F9C918B56DD700440F56 /* WXPhotoScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F68F9C818B56DD700440F56 /* WXPhotoScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,13 @@
 		6F68F9AD18B56AB200440F56 /* WXScrollPhotoViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WXScrollPhotoViewTests-Info.plist"; sourceTree = "<group>"; };
 		6F68F9AF18B56AB200440F56 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6F68F9B118B56AB200440F56 /* WXScrollPhotoViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXScrollPhotoViewTests.m; sourceTree = "<group>"; };
+		6F68F9BC18B56B0200440F56 /* WXPhotoScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXPhotoScrollViewController.h; path = WXPhotoScrollView/WXPhotoScrollViewController.h; sourceTree = "<group>"; };
+		6F68F9BD18B56B0200440F56 /* WXPhotoScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WXPhotoScrollViewController.m; path = WXPhotoScrollView/WXPhotoScrollViewController.m; sourceTree = "<group>"; };
+		6F68F9BF18B56B2900440F56 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		6F68F9C118B56B5400440F56 /* WXPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXPhotoViewController.h; sourceTree = "<group>"; };
+		6F68F9C218B56B5400440F56 /* WXPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXPhotoViewController.m; sourceTree = "<group>"; };
+		6F68F9C718B56DD700440F56 /* WXPhotoScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXPhotoScrollView.h; path = WXPhotoScrollView/WXPhotoScrollView.h; sourceTree = "<group>"; };
+		6F68F9C818B56DD700440F56 /* WXPhotoScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WXPhotoScrollView.m; path = WXPhotoScrollView/WXPhotoScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +118,14 @@
 		6F68F99218B56AB200440F56 /* WXScrollPhotoView */ = {
 			isa = PBXGroup;
 			children = (
+				6F68F9BB18B56ACD00440F56 /* WXPhotoScrollView */,
 				6F68F99B18B56AB200440F56 /* AppDelegate.h */,
 				6F68F99C18B56AB200440F56 /* AppDelegate.m */,
 				6F68F99E18B56AB200440F56 /* Images.xcassets */,
+				6F68F9BF18B56B2900440F56 /* Storyboard.storyboard */,
 				6F68F99318B56AB200440F56 /* Supporting Files */,
+				6F68F9C118B56B5400440F56 /* WXPhotoViewController.h */,
+				6F68F9C218B56B5400440F56 /* WXPhotoViewController.m */,
 			);
 			path = WXScrollPhotoView;
 			sourceTree = "<group>";
@@ -142,6 +157,17 @@
 				6F68F9AE18B56AB200440F56 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6F68F9BB18B56ACD00440F56 /* WXPhotoScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				6F68F9BC18B56B0200440F56 /* WXPhotoScrollViewController.h */,
+				6F68F9BD18B56B0200440F56 /* WXPhotoScrollViewController.m */,
+				6F68F9C718B56DD700440F56 /* WXPhotoScrollView.h */,
+				6F68F9C818B56DD700440F56 /* WXPhotoScrollView.m */,
+			);
+			name = WXPhotoScrollView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +247,7 @@
 			files = (
 				6F68F99718B56AB200440F56 /* InfoPlist.strings in Resources */,
 				6F68F99F18B56AB200440F56 /* Images.xcassets in Resources */,
+				6F68F9C018B56B2900440F56 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +268,9 @@
 			files = (
 				6F68F99D18B56AB200440F56 /* AppDelegate.m in Sources */,
 				6F68F99918B56AB200440F56 /* main.m in Sources */,
+				6F68F9C318B56B5400440F56 /* WXPhotoViewController.m in Sources */,
+				6F68F9BE18B56B0200440F56 /* WXPhotoScrollViewController.m in Sources */,
+				6F68F9C918B56DD700440F56 /* WXPhotoScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +473,7 @@
 				6F68F9B718B56AB200440F56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6F68F9B818B56AB200440F56 /* Build configuration list for PBXNativeTarget "WXScrollPhotoViewTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +482,7 @@
 				6F68F9BA18B56AB200440F56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
