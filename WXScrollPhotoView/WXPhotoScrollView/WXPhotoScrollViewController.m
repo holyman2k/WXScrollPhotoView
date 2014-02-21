@@ -21,6 +21,8 @@
 //    [super loadView];
 
     CGRect frame = [UIScreen mainScreen].bounds;
+    frame.origin.x = -10;
+    frame.size.width += 20;
     self.pagingScrollView = [[UIScrollView alloc] initWithFrame:frame];
     self.pagingScrollView.contentSize = CGSizeMake(frame.size.width * self.datasource.numberOfPhotos,
                                              frame.size.height);
@@ -32,17 +34,24 @@
     self.pagingScrollView.bounces = YES;
     self.pagingScrollView.showsHorizontalScrollIndicator = YES;
     self.pagingScrollView.showsVerticalScrollIndicator = YES;
-    self.view = self.pagingScrollView;
 
+    self.view = self.pagingScrollView;
     self.recycledPages = [[NSMutableSet alloc] init];
     self.visiblePages = [[NSMutableSet alloc] initWithCapacity:3];
-
     [self tilePages];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     [self tilePages];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    CGRect pageingScrollViewFrame = [UIScreen mainScreen].bounds;
+    pageingScrollViewFrame.origin.x = -10;
+    pageingScrollViewFrame.size.width += 20;
+    self.pagingScrollView.frame = pageingScrollViewFrame;
 }
 
 - (void)tilePages
@@ -94,10 +103,14 @@
 
 - (void)configPhotoScrollView:(WXPhotoScrollView *)photoScrollView atPageIndex:(NSUInteger)pageIndex
 {
-    CGRect frame = self.pagingScrollView.frame;
-    frame.origin.x = frame.size.width * pageIndex;
+    CGRect pageingScrollViewFrame = [UIScreen mainScreen].bounds;
+    pageingScrollViewFrame.origin.x = -10;
+    pageingScrollViewFrame.size.width += 20;
+    self.pagingScrollView.frame = pageingScrollViewFrame;
 
-    NSLog(@"config photo at page index %d for frame: %@", photoScrollView.pageIndex, NSStringFromCGRect(frame));
+    CGRect frame = [UIScreen mainScreen].bounds;
+
+    frame.origin.x = (frame.size.width + 20) * pageIndex + 10;
     photoScrollView.frame = frame;
     photoScrollView.backgroundColor = [UIColor whiteColor];
     BOOL isLoading = NO;
@@ -112,6 +125,5 @@
     }
     return page;
 }
-
 
 @end

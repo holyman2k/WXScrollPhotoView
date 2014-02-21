@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E9C78AB2-C59D-450C-8C12-D9DAE9DB8DA4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>WXScrollPhotoView</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6D632ABC-CECE-4292-A6B3-4D7D0CB8D163</key>
+		<string>https://github.com/holyman2k/WXScrollPhotoView.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>WXScrollPhotoView.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6D632ABC-CECE-4292-A6B3-4D7D0CB8D163</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/holyman2k/WXScrollPhotoView.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6D632ABC-CECE-4292-A6B3-4D7D0CB8D163</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6D632ABC-CECE-4292-A6B3-4D7D0CB8D163</string>
+			<key>IDESourceControlWCCName</key>
+			<string>WXScrollPhotoView</string>
+		</dict>
+	</array>
+</dict>
+</plist>

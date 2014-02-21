@@ -17,10 +17,15 @@
 - (id)initWithPageIndex:(NSUInteger)pageIndex;
 {
     if (self = [super init]) {
+        self.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
         _pageIndex = pageIndex;
         CGRect frame = [UIScreen mainScreen].bounds;
         self.imageView = [[UIImageView alloc] initWithFrame:frame];
+        self.imageView.backgroundColor = [UIColor colorWithRed:1.000 green:0.985 blue:0.570 alpha:1.000];
         [self addSubview:self.imageView];
+        self.showsHorizontalScrollIndicator = NO;
+        self.showsVerticalScrollIndicator = NO;
+        self.bounces = YES;
         self.delegate = self;
     }
     return self;
@@ -57,17 +62,19 @@
     return self.imageView;
 }
 
+
 - (void)setImage:(UIImage *)image
 {
+    self.imageView.frame = self.bounds;
     self.imageView.image = image;
-    self.maximumZoomScale = 2;
+    self.maximumZoomScale = 3;
     self.minimumZoomScale = 1;
 }
 
 - (void)prepairToReuse
 {
     self.imageView.image = nil;
-    self.imageView.frame = self.bounds;
+    self.zoomScale = 1;
 }
 
 - (void)reusePhotoScrollViewAtPageIndex:(NSUInteger)pageIndex

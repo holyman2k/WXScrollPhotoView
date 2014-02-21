@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class WXPhotoScrollView;
+
 @interface WXPhotoScrollView : UIScrollView
 
 @property (nonatomic, readonly) NSUInteger pageIndex;
@@ -19,5 +21,6 @@
 - (void)prepairToReuse;
 
 - (void)reusePhotoScrollViewAtPageIndex:(NSUInteger)pageIndex;
+
 
 @end
